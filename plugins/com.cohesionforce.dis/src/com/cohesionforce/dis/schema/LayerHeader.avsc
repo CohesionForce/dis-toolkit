@@ -1,0 +1,6 @@
+
+{"type":"record","name":"LayerHeader","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"layerNumber","type":"int"},
+	{"name":"layerSpecificInformaiton","type":"int"},
+	{"name":"length","type":"int"}
+]}

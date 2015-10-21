@@ -1,0 +1,15 @@
+
+{"type":"record","name":"AntennaLocation","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"antennaLocation","type":["null",{"type":"record","name":"Vector3Double","fields":[
+	{"name":"x","type":"double"},
+			{"name":"y","type":"double"},
+			{"name":"z","type":"double"}
+			]}
+	]},
+	{"name":"relativeAntennaLocation","type":["null",{"type":"record","name":"Vector3Float","fields":[
+	{"name":"x","type":"float"},
+			{"name":"y","type":"float"},
+			{"name":"z","type":"float"}
+			]}
+	]}
+]}

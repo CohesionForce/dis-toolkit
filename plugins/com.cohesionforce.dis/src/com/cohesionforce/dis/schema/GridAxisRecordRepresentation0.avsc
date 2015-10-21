@@ -1,0 +1,12 @@
+
+{"type":"record","name":"GridAxisRecordRepresentation0","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"sampleType","type":"int"},
+	{"name":"dataRepresentation","type":"int"},
+	{"name":"numberOfDataValues","type":"int"},
+	{"name":"dataValues","type":["null",{"type":"array","items":
+	{"type":"record","name":"OneByteChunk","fields":[
+	{"name":"otherParameters","type":"int"}
+			]}
+	}
+	]}
+]}

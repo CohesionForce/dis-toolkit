@@ -1,0 +1,41 @@
+
+{"type":"record","name":"SeesPdu","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"reception_timestamp","type":["null",
+		{"type":"record","name":"Time_t","fields":[
+			{"name":"sec","type":"int"},
+			{"name":"nanosec","type":"int"}
+		]}]},
+	{"name":"source_timestamp","type":["null","Time_t"]},
+	{"name":"protocolVersion","type":"int"},
+	{"name":"exerciseID","type":"int"},
+	{"name":"pduType","type":"int"},
+	{"name":"protocolFamily","type":"int"},
+	{"name":"timestamp","type":"long"},
+	{"name":"pduLength","type":"int"},
+	{"name":"padding","type":"int"},
+	{"name":"orginatingEntityID","type":["null",{"type":"record","name":"EntityID","fields":[
+	{"name":"site","type":"int"},
+			{"name":"application","type":"int"},
+			{"name":"entity","type":"int"}
+			]}
+	]},
+	{"name":"infraredSignatureRepresentationIndex","type":"int"},
+	{"name":"acousticSignatureRepresentationIndex","type":"int"},
+	{"name":"radarCrossSectionSignatureRepresentationIndex","type":"int"},
+	{"name":"numberOfPropulsionSystemData","type":"int"},
+	{"name":"numberOfVectoringSystemData","type":"int"},
+	{"name":"propulsionSystemData","type":["null",{"type":"array","items":
+	{"type":"record","name":"PropulsionSystemData","fields":[
+	{"name":"powerSetting","type":"float"},
+			{"name":"engineRpm","type":"float"}
+			]}
+	}
+	]},
+	{"name":"vectoringSystemData","type":["null",{"type":"array","items":
+	{"type":"record","name":"VectoringNozzleSystemData","fields":[
+	{"name":"horizontalDeflectionAngle","type":"float"},
+			{"name":"verticalDeflectionAngle","type":"float"}
+			]}
+	}
+	]}
+]}

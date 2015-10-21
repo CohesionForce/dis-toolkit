@@ -1,0 +1,6 @@
+
+{"type":"record","name":"AcousticEmitter","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"acousticName","type":"int"},
+	{"name":"function","type":"int"},
+	{"name":"acousticIdNumber","type":"int"}
+]}

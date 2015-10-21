@@ -1,0 +1,9 @@
+
+{"type":"record","name":"RecordSet","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"recordID","type":"long"},
+	{"name":"recordSetSerialNumber","type":"long"},
+	{"name":"recordLength","type":"int"},
+	{"name":"recordCount","type":"int"},
+	{"name":"recordValues","type":"int"},
+	{"name":"pad4","type":"int"}
+]}

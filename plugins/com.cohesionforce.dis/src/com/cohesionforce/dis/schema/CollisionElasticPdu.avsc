@@ -1,0 +1,46 @@
+
+{"type":"record","name":"CollisionElasticPdu","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"reception_timestamp","type":["null",
+		{"type":"record","name":"Time_t","fields":[
+			{"name":"sec","type":"int"},
+			{"name":"nanosec","type":"int"}
+		]}]},
+	{"name":"source_timestamp","type":["null","Time_t"]},
+	{"name":"protocolVersion","type":"int"},
+	{"name":"exerciseID","type":"int"},
+	{"name":"pduType","type":"int"},
+	{"name":"protocolFamily","type":"int"},
+	{"name":"timestamp","type":"long"},
+	{"name":"pduLength","type":"int"},
+	{"name":"padding","type":"int"},
+	{"name":"issuingEntityID","type":["null",{"type":"record","name":"EntityID","fields":[
+	{"name":"site","type":"int"},
+			{"name":"application","type":"int"},
+			{"name":"entity","type":"int"}
+			]}
+	]},
+	{"name":"collidingEntityID","type":["null","EntityID"]},
+	{"name":"collisionEventID","type":["null",{"type":"record","name":"EventID","fields":[
+	{"name":"site","type":"int"},
+			{"name":"application","type":"int"},
+			{"name":"eventNumber","type":"int"}
+			]}
+	]},
+	{"name":"pad","type":"int"},
+	{"name":"contactVelocity","type":["null",{"type":"record","name":"Vector3Float","fields":[
+	{"name":"x","type":"float"},
+			{"name":"y","type":"float"},
+			{"name":"z","type":"float"}
+			]}
+	]},
+	{"name":"mass","type":"float"},
+	{"name":"location","type":["null","Vector3Float"]},
+	{"name":"collisionResultXX","type":"float"},
+	{"name":"collisionResultXY","type":"float"},
+	{"name":"collisionResultXZ","type":"float"},
+	{"name":"collisionResultYY","type":"float"},
+	{"name":"collisionResultYZ","type":"float"},
+	{"name":"collisionResultZZ","type":"float"},
+	{"name":"unitSurfaceNormal","type":["null","Vector3Float"]},
+	{"name":"coefficientOfRestitution","type":"float"}
+]}

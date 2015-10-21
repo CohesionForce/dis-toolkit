@@ -1,0 +1,35 @@
+
+{"type":"record","name":"AcousticEmitterSystemData","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"emitterSystemDataLength","type":"int"},
+	{"name":"numberOfBeamRecords","type":"int"},
+	{"name":"pad2","type":"int"},
+	{"name":"acousticEmitterSystem","type":["null",{"type":"record","name":"AcousticEmitterSystem","fields":[
+	{"name":"acousticName","type":"int"},
+			{"name":"acousticFunction","type":"int"},
+			{"name":"acousticID","type":"int"}
+			]}
+	]},
+	{"name":"emitterLocation","type":["null",{"type":"record","name":"Vector3Float","fields":[
+	{"name":"x","type":"float"},
+			{"name":"y","type":"float"},
+			{"name":"z","type":"float"}
+			]}
+	]},
+	{"name":"beamRecords","type":["null",{"type":"array","items":
+	{"type":"record","name":"AcousticBeamData","fields":[
+	{"name":"beamDataLength","type":"int"},
+			{"name":"beamIDNumber","type":"int"},
+			{"name":"pad2","type":"int"},
+			{"name":"fundamentalDataParameters","type":["null",{"type":"record","name":"AcousticBeamFundamentalParameter","fields":[
+	{"name":"activeEmissionParameterIndex","type":"int"},
+			{"name":"scanPattern","type":"int"},
+			{"name":"beamCenterAzimuth","type":"float"},
+			{"name":"azimuthalBeamwidth","type":"float"},
+			{"name":"beamCenterDE","type":"float"},
+			{"name":"deBeamwidth","type":"float"}
+			]}
+	]}
+			]}
+	}
+	]}
+]}

@@ -1,0 +1,47 @@
+
+{"type":"record","name":"EnvironmentalProcessPdu","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"reception_timestamp","type":["null",
+		{"type":"record","name":"Time_t","fields":[
+			{"name":"sec","type":"int"},
+			{"name":"nanosec","type":"int"}
+		]}]},
+	{"name":"source_timestamp","type":["null","Time_t"]},
+	{"name":"protocolVersion","type":"int"},
+	{"name":"exerciseID","type":"int"},
+	{"name":"pduType","type":"int"},
+	{"name":"protocolFamily","type":"int"},
+	{"name":"timestamp","type":"long"},
+	{"name":"pduLength","type":"int"},
+	{"name":"padding","type":"int"},
+	{"name":"environementalProcessID","type":["null",{"type":"record","name":"EntityID","fields":[
+	{"name":"site","type":"int"},
+			{"name":"application","type":"int"},
+			{"name":"entity","type":"int"}
+			]}
+	]},
+	{"name":"environmentType","type":["null",{"type":"record","name":"EntityType","fields":[
+	{"name":"entityKind","type":"int"},
+			{"name":"domain","type":"int"},
+			{"name":"country","type":"int"},
+			{"name":"category","type":"int"},
+			{"name":"subcategory","type":"int"},
+			{"name":"spec","type":"int"},
+			{"name":"extra","type":"int"}
+			]}
+	]},
+	{"name":"modelType","type":"int"},
+	{"name":"environmentStatus","type":"int"},
+	{"name":"numberOfEnvironmentRecords","type":"int"},
+	{"name":"sequenceNumber","type":"int"},
+	{"name":"environmentRecords","type":["null",{"type":"array","items":
+	{"type":"record","name":"Environment","fields":[
+	{"name":"environmentType","type":"long"},
+			{"name":"length","type":"int"},
+			{"name":"recordIndex","type":"int"},
+			{"name":"padding1","type":"int"},
+			{"name":"geometry","type":"int"},
+			{"name":"padding2","type":"int"}
+			]}
+	}
+	]}
+]}

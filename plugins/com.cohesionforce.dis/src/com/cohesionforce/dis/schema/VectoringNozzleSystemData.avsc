@@ -1,0 +1,5 @@
+
+{"type":"record","name":"VectoringNozzleSystemData","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"horizontalDeflectionAngle","type":"float"},
+	{"name":"verticalDeflectionAngle","type":"float"}
+]}

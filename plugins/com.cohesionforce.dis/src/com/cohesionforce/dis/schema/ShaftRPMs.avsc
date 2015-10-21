@@ -1,0 +1,6 @@
+
+{"type":"record","name":"ShaftRPMs","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"currentShaftRPMs","type":"int"},
+	{"name":"orderedShaftRPMs","type":"int"},
+	{"name":"shaftRPMRateOfChange","type":"float"}
+]}

@@ -1,0 +1,17 @@
+
+{"type":"record","name":"BurstDescriptor","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"munition","type":["null",{"type":"record","name":"EntityType","fields":[
+	{"name":"entityKind","type":"int"},
+			{"name":"domain","type":"int"},
+			{"name":"country","type":"int"},
+			{"name":"category","type":"int"},
+			{"name":"subcategory","type":"int"},
+			{"name":"spec","type":"int"},
+			{"name":"extra","type":"int"}
+			]}
+	]},
+	{"name":"warhead","type":"int"},
+	{"name":"fuse","type":"int"},
+	{"name":"quantity","type":"int"},
+	{"name":"rate","type":"int"}
+]}

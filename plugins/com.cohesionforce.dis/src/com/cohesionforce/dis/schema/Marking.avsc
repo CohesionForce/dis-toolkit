@@ -1,0 +1,8 @@
+
+{"type":"record","name":"Marking","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"characterSet","type":"int"},
+	{"name":"characters","type":["null",{"type":"array","items":
+	"int"
+	}
+	]}
+]}

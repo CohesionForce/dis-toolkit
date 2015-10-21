@@ -1,0 +1,9 @@
+
+{"type":"record","name":"AcousticBeamFundamentalParameter","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"activeEmissionParameterIndex","type":"int"},
+	{"name":"scanPattern","type":"int"},
+	{"name":"beamCenterAzimuth","type":"float"},
+	{"name":"azimuthalBeamwidth","type":"float"},
+	{"name":"beamCenterDE","type":"float"},
+	{"name":"deBeamwidth","type":"float"}
+]}

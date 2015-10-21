@@ -1,0 +1,4 @@
+
+{"type":"record","name":"OneByteChunk","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"otherParameters","type":"int"}
+]}

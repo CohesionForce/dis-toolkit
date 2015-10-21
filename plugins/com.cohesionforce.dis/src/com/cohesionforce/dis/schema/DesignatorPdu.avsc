@@ -1,0 +1,43 @@
+
+{"type":"record","name":"DesignatorPdu","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"reception_timestamp","type":["null",
+		{"type":"record","name":"Time_t","fields":[
+			{"name":"sec","type":"int"},
+			{"name":"nanosec","type":"int"}
+		]}]},
+	{"name":"source_timestamp","type":["null","Time_t"]},
+	{"name":"protocolVersion","type":"int"},
+	{"name":"exerciseID","type":"int"},
+	{"name":"pduType","type":"int"},
+	{"name":"protocolFamily","type":"int"},
+	{"name":"timestamp","type":"long"},
+	{"name":"pduLength","type":"int"},
+	{"name":"padding","type":"int"},
+	{"name":"designatingEntityID","type":["null",{"type":"record","name":"EntityID","fields":[
+	{"name":"site","type":"int"},
+			{"name":"application","type":"int"},
+			{"name":"entity","type":"int"}
+			]}
+	]},
+	{"name":"codeName","type":"int"},
+	{"name":"designatedEntityID","type":["null","EntityID"]},
+	{"name":"designatorCode","type":"int"},
+	{"name":"designatorPower","type":"float"},
+	{"name":"designatorWavelength","type":"float"},
+	{"name":"designatorSpotWrtDesignated","type":["null",{"type":"record","name":"Vector3Float","fields":[
+	{"name":"x","type":"float"},
+			{"name":"y","type":"float"},
+			{"name":"z","type":"float"}
+			]}
+	]},
+	{"name":"designatorSpotLocation","type":["null",{"type":"record","name":"Vector3Double","fields":[
+	{"name":"x","type":"double"},
+			{"name":"y","type":"double"},
+			{"name":"z","type":"double"}
+			]}
+	]},
+	{"name":"deadReckoningAlgorithm","type":"int"},
+	{"name":"padding1","type":"int"},
+	{"name":"padding2","type":"int"},
+	{"name":"entityLinearAcceleration","type":["null","Vector3Float"]}
+]}

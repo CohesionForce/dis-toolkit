@@ -1,0 +1,5 @@
+
+{"type":"record","name":"Point","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"x","type":"float"},
+	{"name":"y","type":"float"}
+]}

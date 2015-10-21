@@ -1,0 +1,7 @@
+
+{"type":"record","name":"SystemID","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"systemType","type":"int"},
+	{"name":"systemName","type":"int"},
+	{"name":"systemMode","type":"int"},
+	{"name":"changeOptions","type":"int"}
+]}

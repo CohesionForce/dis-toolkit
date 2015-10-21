@@ -1,0 +1,8 @@
+
+{"type":"record","name":"ObjectType","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"entityKind","type":"int"},
+	{"name":"domain","type":"int"},
+	{"name":"country","type":"int"},
+	{"name":"category","type":"int"},
+	{"name":"subcategory","type":"int"}
+]}

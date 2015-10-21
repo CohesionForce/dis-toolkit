@@ -1,0 +1,11 @@
+
+{"type":"record","name":"FundamentalParameterDataIff","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"erp","type":"float"},
+	{"name":"frequency","type":"float"},
+	{"name":"pgrf","type":"float"},
+	{"name":"pulseWidth","type":"float"},
+	{"name":"burstLength","type":"long"},
+	{"name":"applicableModes","type":"int"},
+	{"name":"pad2","type":"int"},
+	{"name":"pad3","type":"int"}
+]}

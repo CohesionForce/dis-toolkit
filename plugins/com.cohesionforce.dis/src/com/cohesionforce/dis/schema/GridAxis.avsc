@@ -1,0 +1,10 @@
+
+{"type":"record","name":"GridAxis","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"domainInitialXi","type":"double"},
+	{"name":"domainFinalXi","type":"double"},
+	{"name":"domainPointsXi","type":"int"},
+	{"name":"interleafFactor","type":"int"},
+	{"name":"axisType","type":"int"},
+	{"name":"numberOfPointsOnXiAxis","type":"int"},
+	{"name":"initialIndex","type":"int"}
+]}

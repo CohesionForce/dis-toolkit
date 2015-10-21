@@ -1,0 +1,13 @@
+
+{"type":"record","name":"FundamentalParameterData","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"frequency","type":"float"},
+	{"name":"frequencyRange","type":"float"},
+	{"name":"effectiveRadiatedPower","type":"float"},
+	{"name":"pulseRepetitionFrequency","type":"float"},
+	{"name":"pulseWidth","type":"float"},
+	{"name":"beamAzimuthCenter","type":"float"},
+	{"name":"beamAzimuthSweep","type":"float"},
+	{"name":"beamElevationCenter","type":"float"},
+	{"name":"beamElevationSweep","type":"float"},
+	{"name":"beamSweepSync","type":"float"}
+]}

@@ -1,0 +1,16 @@
+
+{"type":"record","name":"PduContainer","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"numberOfPdus","type":"int"},
+	{"name":"pdus","type":["null",{"type":"array","items":
+	{"type":"record","name":"Pdu","fields":[
+	{"name":"protocolVersion","type":"int"},
+			{"name":"exerciseID","type":"int"},
+			{"name":"pduType","type":"int"},
+			{"name":"protocolFamily","type":"int"},
+			{"name":"timestamp","type":"long"},
+			{"name":"pduLength","type":"int"},
+			{"name":"padding","type":"int"}
+			]}
+	}
+	]}
+]}

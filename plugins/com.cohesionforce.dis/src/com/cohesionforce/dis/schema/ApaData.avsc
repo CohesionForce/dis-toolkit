@@ -1,0 +1,5 @@
+
+{"type":"record","name":"ApaData","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"parameterIndex","type":"int"},
+	{"name":"parameterValue","type":"int"}
+]}

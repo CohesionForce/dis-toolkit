@@ -1,0 +1,9 @@
+
+{"type":"record","name":"Environment","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"environmentType","type":"long"},
+	{"name":"length","type":"int"},
+	{"name":"recordIndex","type":"int"},
+	{"name":"padding1","type":"int"},
+	{"name":"geometry","type":"int"},
+	{"name":"padding2","type":"int"}
+]}

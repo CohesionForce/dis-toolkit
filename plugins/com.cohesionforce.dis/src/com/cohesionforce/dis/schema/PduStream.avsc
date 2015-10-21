@@ -1,0 +1,13 @@
+
+{"type":"record","name":"PduStream","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"description","type":["null",{"type":"array","items":
+	"int"
+	}
+	]},
+	{"name":"name","type":["null",{"type":"array","items":
+	"int"
+	}
+	]},
+	{"name":"startTime","type":"long"},
+	{"name":"stopTime","type":"long"}
+]}

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DIS Utilities
+Bundle-SymbolicName: com.cohesionforce.dis
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: CohesionForce, Inc
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

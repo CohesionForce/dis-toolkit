@@ -1,0 +1,5 @@
+
+{"type":"record","name":"Relationship","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"nature","type":"int"},
+	{"name":"position","type":"int"}
+]}

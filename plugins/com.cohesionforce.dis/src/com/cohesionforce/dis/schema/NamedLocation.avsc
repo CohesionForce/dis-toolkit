@@ -1,0 +1,5 @@
+
+{"type":"record","name":"NamedLocation","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"stationName","type":"int"},
+	{"name":"stationNumber","type":"int"}
+]}

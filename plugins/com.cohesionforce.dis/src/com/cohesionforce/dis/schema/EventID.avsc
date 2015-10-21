@@ -1,0 +1,6 @@
+
+{"type":"record","name":"EventID","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"site","type":"int"},
+	{"name":"application","type":"int"},
+	{"name":"eventNumber","type":"int"}
+]}

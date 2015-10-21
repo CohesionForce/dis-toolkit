@@ -1,0 +1,6 @@
+
+{"type":"record","name":"EmitterSystem","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"emitterName","type":"int"},
+	{"name":"function","type":"int"},
+	{"name":"emitterIdNumber","type":"int"}
+]}

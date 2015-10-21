@@ -1,0 +1,9 @@
+
+{"type":"record","name":"VariableDatum","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"variableDatumID","type":"long"},
+	{"name":"variableDatumLength","type":"long"},
+	{"name":"variableData","type":["null",{"type":"array","items":
+	"int"
+	}
+	]}
+]}

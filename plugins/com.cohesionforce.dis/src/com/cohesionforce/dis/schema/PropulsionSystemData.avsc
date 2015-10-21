@@ -1,0 +1,5 @@
+
+{"type":"record","name":"PropulsionSystemData","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"powerSetting","type":"float"},
+	{"name":"engineRpm","type":"float"}
+]}

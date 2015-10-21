@@ -1,0 +1,7 @@
+
+{"type":"record","name":"SixByteChunk","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"otherParameters","type":["null",{"type":"array","items":
+	"int"
+	}
+	]}
+]}

@@ -1,0 +1,6 @@
+
+{"type":"record","name":"Orientation","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"psi","type":"float"},
+	{"name":"theta","type":"float"},
+	{"name":"phi","type":"float"}
+]}

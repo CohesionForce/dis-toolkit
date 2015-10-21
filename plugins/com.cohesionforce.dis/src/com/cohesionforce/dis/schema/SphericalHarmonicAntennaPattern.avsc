@@ -1,0 +1,4 @@
+
+{"type":"record","name":"SphericalHarmonicAntennaPattern","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"harmonicOrder","type":"int"}
+]}

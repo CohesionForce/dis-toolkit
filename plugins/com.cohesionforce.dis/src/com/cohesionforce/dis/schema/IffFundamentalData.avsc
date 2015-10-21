@@ -1,0 +1,13 @@
+
+{"type":"record","name":"IffFundamentalData","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"systemStatus","type":"int"},
+	{"name":"alternateParameter4","type":"int"},
+	{"name":"informationLayers","type":"int"},
+	{"name":"modifier","type":"int"},
+	{"name":"parameter1","type":"int"},
+	{"name":"parameter2","type":"int"},
+	{"name":"parameter3","type":"int"},
+	{"name":"parameter4","type":"int"},
+	{"name":"parameter5","type":"int"},
+	{"name":"parameter6","type":"int"}
+]}

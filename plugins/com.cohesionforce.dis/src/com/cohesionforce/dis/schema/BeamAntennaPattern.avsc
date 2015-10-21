@@ -1,0 +1,17 @@
+
+{"type":"record","name":"BeamAntennaPattern","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"beamDirection","type":["null",{"type":"record","name":"Orientation","fields":[
+	{"name":"psi","type":"float"},
+			{"name":"theta","type":"float"},
+			{"name":"phi","type":"float"}
+			]}
+	]},
+	{"name":"azimuthBeamwidth","type":"float"},
+	{"name":"elevationBeamwidth","type":"float"},
+	{"name":"referenceSystem","type":"float"},
+	{"name":"padding1","type":"int"},
+	{"name":"padding2","type":"int"},
+	{"name":"ez","type":"float"},
+	{"name":"ex","type":"float"},
+	{"name":"phase","type":"float"}
+]}

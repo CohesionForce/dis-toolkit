@@ -1,0 +1,14 @@
+
+{"type":"record","name":"SupplyQuantity","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"supplyType","type":["null",{"type":"record","name":"EntityType","fields":[
+	{"name":"entityKind","type":"int"},
+			{"name":"domain","type":"int"},
+			{"name":"country","type":"int"},
+			{"name":"category","type":"int"},
+			{"name":"subcategory","type":"int"},
+			{"name":"spec","type":"int"},
+			{"name":"extra","type":"int"}
+			]}
+	]},
+	{"name":"quantity","type":"int"}
+]}

@@ -1,0 +1,8 @@
+
+{"type":"record","name":"BeamData","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"beamAzimuthCenter","type":"float"},
+	{"name":"beamAzimuthSweep","type":"float"},
+	{"name":"beamElevationCenter","type":"float"},
+	{"name":"beamElevationSweep","type":"float"},
+	{"name":"beamSweepSync","type":"float"}
+]}

@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dis" nsURI="http://net.langleystudios.dis/1998" nsPrefix="dis">
+  <eClassifiers xsi:type="ecore:EClass" name="AngularVelocityVector">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AntennaLocation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="antennaLocation" eType="#//Vector3Double"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relativeAntennaLocation"
+        eType="#//Vector3Float" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BeamAntennaPattern">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beamDirection" eType="#//Orientation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="azimuthBeamwidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elevationBeamwidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceSystem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ez" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SphericalHarmonicAntennaPattern">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="harmonicOrder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArticulationParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterTypeDesignator"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeIndicator" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="partAttachedTo" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BurstDescriptor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="munition" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="warhead" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fuse" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClockTime">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timePastHour" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmitterSystem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emitterName" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="function" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emitterIdNumber" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimulationAddress">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="site" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="application" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entityKind" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subcategory" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spec" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extra" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entityKind" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subcategory" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Orientation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="psi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="theta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventID">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="site" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="application" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventNumber" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FixedDatum">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fixedDatumID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fixedDatumValue" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FundamentalParameterData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequencyRange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="effectiveRadiatedPower"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pulseRepetitionFrequency"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pulseWidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamAzimuthCenter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamAzimuthSweep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamElevationCenter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamElevationSweep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamSweepSync" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RadioEntityType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entityKind" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomenclatureVersion" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomenclature" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SupplyQuantity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supplyType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableDatum">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableDatumID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableDatumLength" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableData" lowerBound="8"
+        upperBound="8" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcousticEmitter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acousticName" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="function" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acousticIdNumber" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrackJamTarget">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trackJam" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emitterID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamID" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectronicEmissionBeamData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamDataLength" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamIDNumber" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamParameterIndex" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fundamentalParameterData"
+        eType="#//FundamentalParameterData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamFunction" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfTrackJamTargets"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="highDensityTrackJam" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad4" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jammingModeSequence" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trackJamTargets" upperBound="-1"
+        eType="#//TrackJamTarget" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectronicEmissionSystemData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemDataLength" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfBeamDataRecords"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emissionsPadding2" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emitterSystem" eType="#//EmitterSystem"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beamDataRecords" upperBound="-1"
+        eType="#//ElectronicEmissionBeamData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregateID">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="site" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="application" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aggregateID" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Marking">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characterSet" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characters" lowerBound="11"
+        upperBound="11" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregateMarking">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characterSet" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="characters" lowerBound="31"
+        upperBound="31" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregateType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aggregateKind" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subcategory" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="specificInfo" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extra" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BeamData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamAzimuthCenter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamAzimuthSweep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamElevationCenter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamElevationSweep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamSweepSync" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Environment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="environmentType" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordIndex" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="geometry" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vector3Float">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vector3Double">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityID">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="site" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="application" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entity" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ShaftRPMs">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentShaftRPMs" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="orderedShaftRPMs" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shaftRPMRateOfChange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropulsionSystemData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="powerSetting" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="engineRpm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VectoringNozzleSystemData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="horizontalDeflectionAngle"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verticalDeflectionAngle"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcousticEmitterSystem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acousticName" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acousticFunction" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acousticID" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcousticEmitterSystemData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emitterSystemDataLength"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfBeamRecords" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acousticEmitterSystem"
+        eType="#//AcousticEmitterSystem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emitterLocation" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beamRecords" upperBound="-1"
+        eType="#//AcousticBeamData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcousticBeamData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamDataLength" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamIDNumber" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fundamentalDataParameters"
+        eType="#//AcousticBeamFundamentalParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcousticBeamFundamentalParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activeEmissionParameterIndex"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scanPattern" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamCenterAzimuth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="azimuthalBeamwidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beamCenterDE" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deBeamwidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ApaData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterIndex" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IffFundamentalData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemStatus" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alternateParameter4" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="informationLayers" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifier" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter2" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter3" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter4" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter5" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter6" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntercomCommunicationsParameters">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordLength" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordSpecificField" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LayerHeader">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layerNumber" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layerSpecificInformaiton"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemID">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemName" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemMode" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeOptions" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FundamentalParameterDataIff">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="erp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pgrf" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pulseWidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="burstLength" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicableModes" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad3" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GridAxis">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainInitialXi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainFinalXi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domainPointsXi" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interleafFactor" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="axisType" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfPointsOnXiAxis"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialIndex" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GridAxisRecord">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sampleType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataRepresentation" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GridAxisRecordRepresentation0" eSuperTypes="#//GridAxisRecord">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDataValues" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValues" upperBound="-1"
+        eType="#//OneByteChunk" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GridAxisRecordRepresentation1" eSuperTypes="#//GridAxisRecord">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldScale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldOffset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDataValues" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValues" upperBound="-1"
+        eType="#//TwoByteChunk" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GridAxisRecordRepresentation2" eSuperTypes="#//GridAxisRecord">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfDataValues" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataValues" upperBound="-1"
+        eType="#//FourByteChunk" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SixByteChunk">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="otherParameters" lowerBound="6"
+        upperBound="6" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearSegmentParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="segmentNumber" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="segmentAppearance" eType="#//SixByteChunk"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Vector3Double"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orientation" eType="#//Orientation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="segmentLength" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="segmentWidth" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="segmentHeight" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="segmentDepth" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EightByteChunk">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="otherParameters" lowerBound="8"
+        upperBound="8" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OneByteChunk">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="otherParameters" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TwoByteChunk">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="otherParameters" lowerBound="2"
+        upperBound="2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FourByteChunk">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="otherParameters" lowerBound="4"
+        upperBound="4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Point">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModulationType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spreadSpectrum" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="major" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="detail" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="system" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relationship">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nature" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedLocation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationName" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationNumber" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeadReckoningParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deadReckoningAlgorithm"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="otherParameters" lowerBound="15"
+        upperBound="15" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityLinearAcceleration"
+        eType="#//Vector3Float" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityAngularVelocity"
+        eType="#//Vector3Float" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RecordSet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordSetSerialNumber"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordLength" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordCount" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recordValues" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad4" eType="#//UByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PduStream">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="512"
+        upperBound="512" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="256"
+        upperBound="256" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pdu">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocolVersion" eType="#//UByte"
+        defaultValueLiteral="6"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exerciseID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pduType" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocolFamily" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pduLength" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityInformationFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="1"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityStatePdu" eSuperTypes="#//EntityInformationFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forceId" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfArticulationParameters"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alternativeEntityType"
+        eType="#//EntityType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityLinearVelocity" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityLocation" eType="#//Vector3Double"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityOrientation" eType="#//Orientation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entityAppearance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deadReckoningParameters"
+        eType="#//DeadReckoningParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" eType="#//Marking"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capabilities" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="articulationParameters"
+        upperBound="-1" eType="#//ArticulationParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CollisionPdu" eSuperTypes="#//EntityInformationFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="issuingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collidingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventID" eType="#//EventID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collisionType" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="velocity" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Vector3Float"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CollisionElasticPdu" eSuperTypes="#//EntityInformationFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="issuingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collidingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collisionEventID" eType="#//EventID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contactVelocity" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collisionResultXX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collisionResultXY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collisionResultXZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collisionResultYY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collisionResultYZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="collisionResultZZ" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unitSurfaceNormal" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coefficientOfRestitution"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityStateUpdatePdu" eSuperTypes="#//EntityInformationFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="67"/>
+    </eAnnotations>
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="1"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfArticulationParameters"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityLinearVelocity" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityLocation" eType="#//Vector3Double"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityOrientation" eType="#//Orientation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entityAppearance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="articulationParameters"
+        upperBound="-1" eType="#//ArticulationParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WarfareFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="firingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetEntityID" eType="#//EntityID"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FirePdu" eSuperTypes="#//WarfareFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="2"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="munitionID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventID" eType="#//EventID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fireMissionIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationInWorldCoordinates"
+        eType="#//Vector3Double" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="burstDescriptor" eType="#//BurstDescriptor"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="velocity" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rangeToTarget" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DetonationPdu" eSuperTypes="#//WarfareFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="3"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="munitionID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventID" eType="#//EventID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="velocity" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationInWorldCoordinates"
+        eType="#//Vector3Double" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="burstDescriptor" eType="#//BurstDescriptor"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationInEntityCoordinates"
+        eType="#//Vector3Float" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="detonationResult" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfArticulationParameters"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="articulationParameters"
+        upperBound="-1" eType="#//ArticulationParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogisticsFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="3"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceRequestPdu" eSuperTypes="#//LogisticsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="5"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servicingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceTypeRequested" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSupplies" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceRequestPadding"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supplies" upperBound="-1"
+        eType="#//SupplyQuantity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResupplyOfferPdu" eSuperTypes="#//LogisticsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="6"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supplyingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSupplies" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supplies" upperBound="-1"
+        eType="#//SupplyQuantity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResupplyReceivedPdu" eSuperTypes="#//LogisticsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="7"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supplyingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSupplies" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supplies" upperBound="-1"
+        eType="#//SupplyQuantity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResupplyCancelPdu" eSuperTypes="#//LogisticsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="8"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supplyingEntityID" eType="#//EntityID"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepairCompletePdu" eSuperTypes="#//LogisticsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="9"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repairingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="repair" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepairResponsePdu" eSuperTypes="#//LogisticsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="10"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repairingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="repairResult" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimulationManagementFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="5"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originatingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingEntityID" eType="#//EntityID"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CreateEntityPdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="11"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RemoveEntityPdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="12"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StartResumePdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="13"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realWorldTime" eType="#//ClockTime"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="simulationTime" eType="#//ClockTime"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StopFreezePdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="14"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realWorldTime" eType="#//ClockTime"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reason" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frozenBehavior" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcknowledgePdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="15"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acknowledgeFlag" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseFlag" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionRequestPdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="16"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatums" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatums"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatums" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatums" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionResponsePdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="17"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestStatus" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatums" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatums"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatums" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatums" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataQueryPdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="18"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeInterval" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatums" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatums"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatums" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatums" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetDataPdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="19"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatums" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatums"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatums" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatums" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="20"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatums" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatums"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatums" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatums" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventReportPdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="21"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventType" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatums" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatums"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatums" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatums" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommentPdu" eSuperTypes="#//SimulationManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="22"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatums" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatums"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatums" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatums" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DistributedEmissionsFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="6"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectronicEmissionsPdu" eSuperTypes="#//DistributedEmissionsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="paddingForEmissionsPdu">
+      <details key="value" value="0"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emittingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventID" eType="#//EventID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stateUpdateIndicator" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSystems" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paddingForEmissionsPdu"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systems" upperBound="-1"
+        eType="#//ElectronicEmissionSystemData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DesignatorPdu" eSuperTypes="#//DistributedEmissionsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="24"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="designatingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeName" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="designatedEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="designatorCode" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="designatorPower" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="designatorWavelength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="designatorSpotWrtDesignated"
+        eType="#//Vector3Float" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="designatorSpotLocation"
+        eType="#//Vector3Double" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deadReckoningAlgorithm"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityLinearAcceleration"
+        eType="#//Vector3Float" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UaPdu" eSuperTypes="#//DistributedEmissionsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="29"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emittingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventID" eType="#//EventID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stateChangeIndicator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="passiveParameterIndex"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propulsionPlantConfiguration"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfShaftRPMs" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfApaData" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfEmitterSystems"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shaftRPMs" upperBound="-1"
+        eType="#//ShaftRPMs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="apaData" upperBound="-1"
+        eType="#//ApaData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emitterSystems" upperBound="-1"
+        eType="#//AcousticEmitterSystemData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IffAtcNavAidsLayer1Pdu" eSuperTypes="#//DistributedEmissionsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="28"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emittingEntityId" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eventID" eType="#//EventID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemID" eType="#//SystemID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fundamentalParameters"
+        eType="#//IffFundamentalData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IffAtcNavAidsLayer2Pdu" eSuperTypes="#//IffAtcNavAidsLayer1Pdu">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layerHeader" eType="#//LayerHeader"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="beamData" eType="#//BeamData"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="secondaryOperationalData"
+        eType="#//BeamData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fundamentalIffParameters"
+        upperBound="-1" eType="#//FundamentalParameterDataIff" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SeesPdu" eSuperTypes="#//DistributedEmissionsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="30"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orginatingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="infraredSignatureRepresentationIndex"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acousticSignatureRepresentationIndex"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radarCrossSectionSignatureRepresentationIndex"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfPropulsionSystemData"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVectoringSystemData"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propulsionSystemData" upperBound="-1"
+        eType="#//PropulsionSystemData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vectoringSystemData" upperBound="-1"
+        eType="#//VectoringNozzleSystemData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RadioCommunicationsFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="4"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityId" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radioId" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntercomSignalPdu" eSuperTypes="#//RadioCommunicationsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="31"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityID1" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="communicationsDeviceID"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encodingScheme" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tdlType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sampleRate" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfData" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="samples" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//OneByteChunk"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TransmitterPdu" eSuperTypes="#//RadioCommunicationsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="25"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="radioEntityType" eType="#//RadioEntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transmitState" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputSource" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="antennaLocation" eType="#//Vector3Double"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relativeAntennaLocation"
+        eType="#//Vector3Float" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="antennaPatternType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfAntennaPatternList"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frequency" eType="#//ULong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transmitFrequencyBandwidth"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modulationType" eType="#//ModulationType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cryptoSystem" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cryptoKeyId" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfModulationParametersList"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding3" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modulationParametersList"
+        upperBound="-1" eType="#//Vector3Float" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="antennaPatternList" upperBound="-1"
+        eType="#//Vector3Float" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignalPdu" eSuperTypes="#//RadioCommunicationsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="26"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encodingScheme" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tdlType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sampleRate" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="samples" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//OneByteChunk"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReceiverPdu" eSuperTypes="#//RadioCommunicationsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="27"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receiverState" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receivedPoser" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transmitterEntityId" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transmitterRadioId" eType="#//UShort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntercomControlPdu" eSuperTypes="#//RadioCommunicationsFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="32"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlType" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="communicationsChannelType"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceCommunicationsDeviceID"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceLineID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transmitPriority" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="transmitLineState" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="command" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="masterEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="masterCommunicationsDeviceID"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfIntercomParameters"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intercomParameters" upperBound="-1"
+        eType="#//IntercomCommunicationsParameters" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityManagementFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="7"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AggregateStatePdu" eSuperTypes="#//EntityManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="33"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aggregateID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forceID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aggregateState" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aggregateType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formation" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aggregateMarking" eType="#//AggregateMarking"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimensions" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orientation" eType="#//Orientation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="centerOfMass" eType="#//Vector3Double"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="velocity" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfAggregateIDList"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfEntityIDList" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSilentAggregateSystemList"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSilentEntitySystemList"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aggregateIDList" upperBound="-1"
+        eType="#//AggregateID" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityIDList" upperBound="-1"
+        eType="#//EntityID" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="silentAggregateSystemList"
+        upperBound="-1" eType="#//EntityType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="silentEntitySystemList"
+        upperBound="-1" eType="#//EntityType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatumList"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatumList" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IsGroupOfPdu" eSuperTypes="#//EntityManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="34"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupedEntityCategory"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfGroupedEntityDescriptions"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupedEntityDescriptions"
+        upperBound="-1" eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TransferControlRequestPdu" eSuperTypes="#//EntityManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="35"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orginatingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recevingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tranferType" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transferEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRecordSets" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recordSets" upperBound="-1"
+        eType="#//RecordSet" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IsPartOfPdu" eSuperTypes="#//EntityManagementFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="36"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orginatingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relationship" eType="#//Relationship"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partLocation" eType="#//Vector3Float"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namedLocationID" eType="#//NamedLocation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="partEntityType" eType="#//EntityType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MinefieldFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="8"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MinefieldStatePdu" eSuperTypes="#//MinefieldFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="37"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minefieldID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minefieldSequence" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forceID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfPerimeterPoints"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minefieldType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfMineType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minefieldLocation" eType="#//Vector3Double"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minefieldOrientation" eType="#//Orientation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="appearance" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocolMode" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="perimeterPoints" upperBound="-1"
+        eType="#//Point" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mineType" upperBound="-1"
+        eType="#//EntityType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MinefieldQueryPdu" eSuperTypes="#//MinefieldFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="38"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minefieldID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRequestedPerimeterPoints"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSensorTypes" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataFilter" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestedMineType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestedPerimeterPoints"
+        upperBound="-1" eType="#//Point" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensorTypes" upperBound="-1"
+        eType="#//TwoByteChunk" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MinefieldDataPdu" eSuperTypes="#//MinefieldFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="39"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minefieldID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minefieldSequenceNumbeer"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pduSequenceNumber" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfPdus" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfMineLocation" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSensorTypes" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataFilter" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mineType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensorTypes" upperBound="-1"
+        eType="#//TwoByteChunk" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad3" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mineLocation" upperBound="-1"
+        eType="#//Vector3Float" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MinefieldResponseNackPdu" eSuperTypes="#//MinefieldFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="40"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minefieldID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfMissingPduSequenceNumbers"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="missingPduSequenceNumbers"
+        upperBound="-1" eType="#//EightByteChunk" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SyntheticEnvironmentFamilyPdu" eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="9"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnvironmentalProcessPdu" eSuperTypes="#//SyntheticEnvironmentFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="41"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environementalProcessID"
+        eType="#//EntityID" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelType" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="environmentStatus" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfEnvironmentRecords"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sequenceNumber" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentRecords" upperBound="-1"
+        eType="#//Environment" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GriddedDataPdu" eSuperTypes="#//SyntheticEnvironmentFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="42"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentalSimulationApplicationID"
+        eType="#//EntityID" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldNumber" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pduNumber" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pduTotal" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coordinateSystem" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfGridDataList" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constantGrid" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orientation" eType="#//Orientation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sampleTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalValues" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vectorDimension" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gridDataList" upperBound="-1"
+        eType="#//GridAxis" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PointObjectStatePdu" eSuperTypes="#//SyntheticEnvironmentFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="43"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencedObjectID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateNumber" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forceID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifications" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectType" eType="#//ObjectType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectLocation" eType="#//Vector3Double"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectOrientation" eType="#//Orientation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectAppearance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requesterID" eType="#//SimulationAddress"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingID" eType="#//SimulationAddress"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearObjectStatePdu" eSuperTypes="#//SyntheticEnvironmentFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="44"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencedObjectID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateNumber" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forceID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfLinearSegmentParameters"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requesterID" eType="#//SimulationAddress"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingID" eType="#//SimulationAddress"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectType" eType="#//ObjectType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linearSegmentParameters"
+        upperBound="-1" eType="#//LinearSegmentParameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArealObjectStatePdu" eSuperTypes="#//SyntheticEnvironmentFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="45"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencedObjectID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateNumber" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="forceID" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifications" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectType" eType="#//EntityType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectAppearance" eType="#//SixByteChunk"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfObjectLocation"
+        eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requesterID" eType="#//SimulationAddress"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingID" eType="#//SimulationAddress"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectLocation" upperBound="-1"
+        eType="#//Vector3Double" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimulationManagementWithReliabilityFamilyPdu"
+      eSuperTypes="#//Pdu">
+    <eAnnotations source="protocolFamily">
+      <details key="value" value="10"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="originatingEntityID" eType="#//EntityID"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receivingEntityID" eType="#//EntityID"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CreateEntityReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="51"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RemoveEntityReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="52"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StartResumeReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="53"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realWorldTime" eType="#//ClockTime"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="simulationTime" eType="#//ClockTime"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StopFreezeReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="54"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realWorldTime" eType="#//ClockTime"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reason" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frozenBehavior" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliablityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcknowledgeReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="55"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acknowledgeFlag" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseFlag" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionRequestReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="56"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatumRecords" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatumRecords" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionResponseReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="57"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseStatus" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatumRecords" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatumRecords" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataQueryReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="58"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeInterval" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatumRecords" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatumRecords" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetDataReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="59"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatumRecords" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatumRecords" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="60"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatumRecords" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatumRecords" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventReportReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="61"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatumRecords" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatumRecords" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommentReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="62"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFixedDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfVariableDatumRecords"
+        eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedDatumRecords" upperBound="-1"
+        eType="#//FixedDatum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variableDatumRecords" upperBound="-1"
+        eType="#//VariableDatum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RecordQueryReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="65"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventType" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRecordIDs" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recordIDs" upperBound="-1"
+        eType="#//FourByteChunk" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetRecordReliablePdu" eSuperTypes="#//SimulationManagementWithReliabilityFamilyPdu">
+    <eAnnotations source="pduType">
+      <details key="value" value="64"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestID" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredReliabilityService"
+        eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad1" eType="#//UShort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pad2" eType="#//UByte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfRecordSets" eType="#//UInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recordSets" upperBound="-1"
+        eType="#//RecordSet" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PduContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfPdus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pdus" upperBound="-1" eType="#//Pdu"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="UInt" instanceClassName="java.lang.Long"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="UShort" instanceClassName="java.lang.Integer"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="UByte" instanceClassName="java.lang.Short"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ULong" instanceClassName="java.math.BigInteger"/>
+</ecore:EPackage>

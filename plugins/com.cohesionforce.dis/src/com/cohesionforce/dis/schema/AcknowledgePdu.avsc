@@ -1,0 +1,26 @@
+
+{"type":"record","name":"AcknowledgePdu","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"reception_timestamp","type":["null",
+		{"type":"record","name":"Time_t","fields":[
+			{"name":"sec","type":"int"},
+			{"name":"nanosec","type":"int"}
+		]}]},
+	{"name":"source_timestamp","type":["null","Time_t"]},
+	{"name":"protocolVersion","type":"int"},
+	{"name":"exerciseID","type":"int"},
+	{"name":"pduType","type":"int"},
+	{"name":"protocolFamily","type":"int"},
+	{"name":"timestamp","type":"long"},
+	{"name":"pduLength","type":"int"},
+	{"name":"padding","type":"int"},
+	{"name":"originatingEntityID","type":["null",{"type":"record","name":"EntityID","fields":[
+	{"name":"site","type":"int"},
+			{"name":"application","type":"int"},
+			{"name":"entity","type":"int"}
+			]}
+	]},
+	{"name":"receivingEntityID","type":["null","EntityID"]},
+	{"name":"acknowledgeFlag","type":"int"},
+	{"name":"responseFlag","type":"int"},
+	{"name":"requestID","type":"long"}
+]}

@@ -1,0 +1,6 @@
+
+{"type":"record","name":"Vector3Double","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"x","type":"double"},
+	{"name":"y","type":"double"},
+	{"name":"z","type":"double"}
+]}

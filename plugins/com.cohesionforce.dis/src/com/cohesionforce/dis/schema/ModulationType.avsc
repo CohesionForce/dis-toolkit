@@ -1,0 +1,7 @@
+
+{"type":"record","name":"ModulationType","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"spreadSpectrum","type":"int"},
+	{"name":"major","type":"int"},
+	{"name":"detail","type":"int"},
+	{"name":"system","type":"int"}
+]}

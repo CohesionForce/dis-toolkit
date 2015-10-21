@@ -1,0 +1,9 @@
+
+{"type":"record","name":"RadioEntityType","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"entityKind","type":"int"},
+	{"name":"domain","type":"int"},
+	{"name":"country","type":"int"},
+	{"name":"category","type":"int"},
+	{"name":"nomenclatureVersion","type":"int"},
+	{"name":"nomenclature","type":"int"}
+]}

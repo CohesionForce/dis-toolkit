@@ -1,0 +1,5 @@
+
+{"type":"record","name":"ClockTime","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"hour","type":"int"},
+	{"name":"timePastHour","type":"long"}
+]}

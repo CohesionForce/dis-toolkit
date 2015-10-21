@@ -1,0 +1,6 @@
+
+{"type":"record","name":"EntityID","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"site","type":"int"},
+	{"name":"application","type":"int"},
+	{"name":"entity","type":"int"}
+]}

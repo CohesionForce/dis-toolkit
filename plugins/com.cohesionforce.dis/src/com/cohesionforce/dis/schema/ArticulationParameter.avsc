@@ -1,0 +1,8 @@
+
+{"type":"record","name":"ArticulationParameter","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"parameterTypeDesignator","type":"int"},
+	{"name":"changeIndicator","type":"int"},
+	{"name":"partAttachedTo","type":"int"},
+	{"name":"parameterType","type":"int"},
+	{"name":"parameterValue","type":"double"}
+]}

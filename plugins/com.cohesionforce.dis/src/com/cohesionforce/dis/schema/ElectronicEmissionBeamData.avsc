@@ -1,0 +1,37 @@
+
+{"type":"record","name":"ElectronicEmissionBeamData","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"beamDataLength","type":"int"},
+	{"name":"beamIDNumber","type":"int"},
+	{"name":"beamParameterIndex","type":"int"},
+	{"name":"fundamentalParameterData","type":["null",{"type":"record","name":"FundamentalParameterData","fields":[
+	{"name":"frequency","type":"float"},
+			{"name":"frequencyRange","type":"float"},
+			{"name":"effectiveRadiatedPower","type":"float"},
+			{"name":"pulseRepetitionFrequency","type":"float"},
+			{"name":"pulseWidth","type":"float"},
+			{"name":"beamAzimuthCenter","type":"float"},
+			{"name":"beamAzimuthSweep","type":"float"},
+			{"name":"beamElevationCenter","type":"float"},
+			{"name":"beamElevationSweep","type":"float"},
+			{"name":"beamSweepSync","type":"float"}
+			]}
+	]},
+	{"name":"beamFunction","type":"int"},
+	{"name":"numberOfTrackJamTargets","type":"int"},
+	{"name":"highDensityTrackJam","type":"int"},
+	{"name":"pad4","type":"int"},
+	{"name":"jammingModeSequence","type":"long"},
+	{"name":"trackJamTargets","type":["null",{"type":"array","items":
+	{"type":"record","name":"TrackJamTarget","fields":[
+	{"name":"trackJam","type":["null",{"type":"record","name":"EntityID","fields":[
+	{"name":"site","type":"int"},
+			{"name":"application","type":"int"},
+			{"name":"entity","type":"int"}
+			]}
+	]},
+			{"name":"emitterID","type":"int"},
+			{"name":"beamID","type":"int"}
+			]}
+	}
+	]}
+]}

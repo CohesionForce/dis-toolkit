@@ -1,0 +1,10 @@
+
+{"type":"record","name":"AggregateType","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"aggregateKind","type":"int"},
+	{"name":"domain","type":"int"},
+	{"name":"country","type":"int"},
+	{"name":"category","type":"int"},
+	{"name":"subcategory","type":"int"},
+	{"name":"specificInfo","type":"int"},
+	{"name":"extra","type":"int"}
+]}

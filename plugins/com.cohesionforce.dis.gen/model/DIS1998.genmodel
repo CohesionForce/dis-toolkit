@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.langleystudios.dis/src-gen" modelPluginID="net.langleystudios.dis"
+    modelName="DIS1998" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>DIS1998.ecore</foreignModel>
+  <genPackages prefix="dis" basePackage="net.langleystudios" disposableProviderFactory="true"
+      loadInitialization="true" literalsInterface="false" ecorePackage="DIS1998.ecore#/">
+    <genDataTypes ecoreDataType="DIS1998.ecore#//UInt"/>
+    <genDataTypes ecoreDataType="DIS1998.ecore#//UShort"/>
+    <genDataTypes ecoreDataType="DIS1998.ecore#//UByte"/>
+    <genDataTypes ecoreDataType="DIS1998.ecore#//ULong"/>
+    <genClasses ecoreClass="DIS1998.ecore#//AngularVelocityVector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AngularVelocityVector/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AngularVelocityVector/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AngularVelocityVector/z"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AntennaLocation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AntennaLocation/antennaLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AntennaLocation/relativeAntennaLocation"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//BeamAntennaPattern">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//BeamAntennaPattern/beamDirection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamAntennaPattern/azimuthBeamwidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamAntennaPattern/elevationBeamwidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamAntennaPattern/referenceSystem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamAntennaPattern/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamAntennaPattern/padding2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamAntennaPattern/ez"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamAntennaPattern/ex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamAntennaPattern/phase"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SphericalHarmonicAntennaPattern">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SphericalHarmonicAntennaPattern/harmonicOrder"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ArticulationParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArticulationParameter/parameterTypeDesignator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArticulationParameter/changeIndicator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArticulationParameter/partAttachedTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArticulationParameter/parameterType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArticulationParameter/parameterValue"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//BurstDescriptor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//BurstDescriptor/munition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BurstDescriptor/warhead"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BurstDescriptor/fuse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BurstDescriptor/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BurstDescriptor/rate"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ClockTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ClockTime/hour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ClockTime/timePastHour"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EmitterSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EmitterSystem/emitterName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EmitterSystem/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EmitterSystem/emitterIdNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SimulationAddress">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SimulationAddress/site"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SimulationAddress/application"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EntityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityType/entityKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityType/domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityType/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityType/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityType/subcategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityType/spec"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityType/extra"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ObjectType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ObjectType/entityKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ObjectType/domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ObjectType/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ObjectType/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ObjectType/subcategory"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//Orientation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Orientation/psi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Orientation/theta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Orientation/phi"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EventID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventID/site"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventID/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventID/eventNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//FixedDatum">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FixedDatum/fixedDatumID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FixedDatum/fixedDatumValue"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//FundamentalParameterData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/frequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/frequencyRange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/effectiveRadiatedPower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/pulseRepetitionFrequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/pulseWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/beamAzimuthCenter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/beamAzimuthSweep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/beamElevationCenter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/beamElevationSweep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterData/beamSweepSync"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//RadioEntityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RadioEntityType/entityKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RadioEntityType/domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RadioEntityType/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RadioEntityType/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RadioEntityType/nomenclatureVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RadioEntityType/nomenclature"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SupplyQuantity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SupplyQuantity/supplyType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SupplyQuantity/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//VariableDatum">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//VariableDatum/variableDatumID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//VariableDatum/variableDatumLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//VariableDatum/variableData"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AcousticEmitter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitter/acousticName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitter/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitter/acousticIdNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//TrackJamTarget">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TrackJamTarget/trackJam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TrackJamTarget/emitterID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TrackJamTarget/beamID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ElectronicEmissionBeamData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionBeamData/beamDataLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionBeamData/beamIDNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionBeamData/beamParameterIndex"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ElectronicEmissionBeamData/fundamentalParameterData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionBeamData/beamFunction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionBeamData/numberOfTrackJamTargets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionBeamData/highDensityTrackJam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionBeamData/pad4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionBeamData/jammingModeSequence"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ElectronicEmissionBeamData/trackJamTargets"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ElectronicEmissionSystemData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionSystemData/systemDataLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionSystemData/numberOfBeams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionSystemData/emissionsPadding2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ElectronicEmissionSystemData/emitterSystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ElectronicEmissionSystemData/location"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ElectronicEmissionSystemData/beamDataRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AggregateID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateID/site"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateID/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateID/aggregateID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//Marking">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Marking/characterSet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Marking/characters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AggregateMarking">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateMarking/characterSet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateMarking/characters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AggregateType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateType/aggregateKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateType/domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateType/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateType/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateType/subcategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateType/specificInfo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateType/extra"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//BeamData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamData/beamAzimuthCenter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamData/beamAzimuthSweep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamData/beamElevationCenter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamData/beamElevationSweep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//BeamData/beamSweepSync"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//Environment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Environment/environmentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Environment/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Environment/recordIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Environment/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Environment/geometry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Environment/padding2"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//Vector3Float">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Vector3Float/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Vector3Float/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Vector3Float/z"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//Vector3Double">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Vector3Double/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Vector3Double/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Vector3Double/z"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EntityID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityID/site"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityID/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityID/entity"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ShaftRPMs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ShaftRPMs/currentShaftRPMs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ShaftRPMs/orderedShaftRPMs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ShaftRPMs/shaftRPMRateOfChange"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//PropulsionSystemData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PropulsionSystemData/powerSetting"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PropulsionSystemData/engineRpm"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//VectoringNozzleSystemData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//VectoringNozzleSystemData/horizontalDeflectionAngle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//VectoringNozzleSystemData/verticalDeflectionAngle"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AcousticEmitterSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitterSystem/acousticName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitterSystem/acousticFunction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitterSystem/acousticID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AcousticEmitterSystemData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitterSystemData/emitterSystemDataLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitterSystemData/numberOfBeams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticEmitterSystemData/pad2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AcousticEmitterSystemData/acousticEmitterSystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AcousticEmitterSystemData/emitterLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AcousticEmitterSystemData/beamRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AcousticBeamData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamData/beamDataLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamData/beamIDNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamData/pad2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AcousticBeamData/fundamentalDataParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AcousticBeamFundamentalParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamFundamentalParameter/activeEmissionParameterIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamFundamentalParameter/scanPattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamFundamentalParameter/beamCenterAzimuth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamFundamentalParameter/azimuthalBeamwidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamFundamentalParameter/beamCenterDE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcousticBeamFundamentalParameter/deBeamwidth"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ApaData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ApaData/parameterIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ApaData/parameterValue"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//IffFundamentalData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/systemStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/alternateParameter4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/informationLayers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/modifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/parameter1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/parameter2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/parameter3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/parameter4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/parameter5"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffFundamentalData/parameter6"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//IntercomCommunicationsParameters">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomCommunicationsParameters/recordType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomCommunicationsParameters/recordLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomCommunicationsParameters/recordSpecificField"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//LayerHeader">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LayerHeader/layerNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LayerHeader/layerSpecificInformaiton"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LayerHeader/length"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SystemID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SystemID/systemType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SystemID/systemName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SystemID/systemMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SystemID/changeOptions"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//FundamentalParameterDataIff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterDataIff/erp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterDataIff/frequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterDataIff/pgrf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterDataIff/pulseWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterDataIff/burstLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterDataIff/applicableModes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterDataIff/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FundamentalParameterDataIff/pad3"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//GridAxis">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxis/domainInitialXi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxis/domainFinalXi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxis/domainPointsXi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxis/interleafFactor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxis/axisType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxis/numberOfPointsOnXiAxis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxis/initialIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//GridAxisRecord">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxisRecord/sampleType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxisRecord/dataRepresentation"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//GridAxisRecordRepresentation0">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxisRecordRepresentation0/numberOfBytes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//GridAxisRecordRepresentation0/dataValues"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//GridAxisRecordRepresentation1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxisRecordRepresentation1/fieldScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxisRecordRepresentation1/fieldOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxisRecordRepresentation1/numberOfValues"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//GridAxisRecordRepresentation1/dataValues"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//GridAxisRecordRepresentation2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GridAxisRecordRepresentation2/numberOfValues"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//GridAxisRecordRepresentation2/dataValues"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SixByteChunk">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SixByteChunk/otherParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//LinearSegmentParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearSegmentParameter/segmentNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearSegmentParameter/segmentAppearance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearSegmentParameter/location"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearSegmentParameter/orientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearSegmentParameter/segmentLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearSegmentParameter/segmentWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearSegmentParameter/segmentHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearSegmentParameter/segmentDepth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearSegmentParameter/pad1"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EightByteChunk">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EightByteChunk/otherParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//OneByteChunk">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//OneByteChunk/otherParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//TwoByteChunk">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TwoByteChunk/otherParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//FourByteChunk">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FourByteChunk/otherParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//Point">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Point/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Point/y"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ModulationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ModulationType/spreadSpectrum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ModulationType/major"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ModulationType/detail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ModulationType/system"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Relationship/nature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Relationship/position"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//NamedLocation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//NamedLocation/stationName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//NamedLocation/stationNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//DeadReckoningParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DeadReckoningParameter/deadReckoningAlgorithm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DeadReckoningParameter/otherParameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DeadReckoningParameter/entityLinearAcceleration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DeadReckoningParameter/entityAngularVelocity"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//RecordSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordSet/recordID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordSet/recordSetSerialNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordSet/recordLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordSet/recordCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordSet/recordValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordSet/pad4"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//PduStream">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PduStream/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PduStream/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PduStream/startTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PduStream/stopTime"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//Pdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Pdu/protocolVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Pdu/exerciseID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Pdu/pduType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Pdu/protocolFamily"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Pdu/timestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Pdu/pduLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//Pdu/padding"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EntityInformationFamilyPdu"/>
+    <genClasses ecoreClass="DIS1998.ecore#//EntityStatePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/entityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityStatePdu/forceId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityStatePdu/numberOfArticulationParameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/entityType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/alternativeEntityType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/entityLinearVelocity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/entityLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/entityOrientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityStatePdu/entityAppearance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/deadReckoningParameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/marking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityStatePdu/capabilities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStatePdu/articulationParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//FastEntityStatePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/site"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/entity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/forceId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/numberOfArticulationParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/entityKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/subcategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/specif"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/extra"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/altEntityKind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/altDomain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/altCountry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/altCategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/altSubcategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/altSpecific"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/altExtra"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/xVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/yVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/zVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/xLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/yLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/zLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/psi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/theta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/phi"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/entityAppearance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/deadReckoningAlgorithm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/otherParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/xAcceleration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/yAcceleration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/zAcceleration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/xAngularVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/yAngularVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/zAngularVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/marking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FastEntityStatePdu/capabilities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//FastEntityStatePdu/articulationParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//CollisionPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionPdu/issuingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionPdu/collidingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionPdu/eventID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionPdu/collisionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionPdu/pad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionPdu/velocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionPdu/mass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionPdu/location"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//CollisionElasticPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionElasticPdu/issuingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionElasticPdu/collidingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionElasticPdu/collisionEventID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/pad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionElasticPdu/contactVelocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/mass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionElasticPdu/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/collisionResultXX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/collisionResultXY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/collisionResultXZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/collisionResultYY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/collisionResultYZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/collisionResultZZ"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CollisionElasticPdu/unitSurfaceNormal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CollisionElasticPdu/coefficientOfRestitution"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EntityStateUpdatePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStateUpdatePdu/entityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityStateUpdatePdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityStateUpdatePdu/numberOfArticulationParameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStateUpdatePdu/entityLinearVelocity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStateUpdatePdu/entityLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStateUpdatePdu/entityOrientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EntityStateUpdatePdu/entityAppearance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EntityStateUpdatePdu/articulationParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//WarfareFamilyPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//WarfareFamilyPdu/firingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//WarfareFamilyPdu/targetEntityID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//FirePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//FirePdu/munitionID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//FirePdu/eventID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FirePdu/fireMissionIndex"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//FirePdu/locationInWorldCoordinates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//FirePdu/burstDescriptor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//FirePdu/velocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//FirePdu/rangeToTarget"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//DetonationPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DetonationPdu/munitionID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DetonationPdu/eventID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DetonationPdu/velocity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DetonationPdu/locationInWorldCoordinates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DetonationPdu/burstDescriptor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DetonationPdu/locationInEntityCoordinates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DetonationPdu/detonationResult"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DetonationPdu/numberOfArticulationParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DetonationPdu/pad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DetonationPdu/articulationParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//LogisticsFamilyPdu"/>
+    <genClasses ecoreClass="DIS1998.ecore#//ServiceRequestPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ServiceRequestPdu/requestingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ServiceRequestPdu/servicingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ServiceRequestPdu/serviceTypeRequested"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ServiceRequestPdu/numberOfSupplyTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ServiceRequestPdu/serviceRequestPadding"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ServiceRequestPdu/supplies"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ResupplyOfferPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ResupplyOfferPdu/receivingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ResupplyOfferPdu/supplyingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ResupplyOfferPdu/numberOfSupplyTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ResupplyOfferPdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ResupplyOfferPdu/padding2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ResupplyOfferPdu/supplies"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ResupplyReceivedPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ResupplyReceivedPdu/receivingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ResupplyReceivedPdu/supplyingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ResupplyReceivedPdu/numberOfSupplyTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ResupplyReceivedPdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ResupplyReceivedPdu/padding2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ResupplyReceivedPdu/supplies"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ResupplyCancelPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ResupplyCancelPdu/receivingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ResupplyCancelPdu/supplyingEntityID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//RepairCompletePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//RepairCompletePdu/receivingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//RepairCompletePdu/repairingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RepairCompletePdu/repair"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RepairCompletePdu/padding2"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//RepairResponsePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//RepairResponsePdu/receivingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//RepairResponsePdu/repairingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RepairResponsePdu/repairResult"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RepairResponsePdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RepairResponsePdu/padding2"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SimulationManagementFamilyPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SimulationManagementFamilyPdu/originatingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SimulationManagementFamilyPdu/receivingEntityID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//CreateEntityPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CreateEntityPdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//RemoveEntityPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RemoveEntityPdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//StartResumePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//StartResumePdu/realWorldTime"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//StartResumePdu/simulationTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StartResumePdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//StopFreezePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//StopFreezePdu/realWorldTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezePdu/reason"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezePdu/frozenBehavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezePdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezePdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AcknowledgePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcknowledgePdu/acknowledgeFlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcknowledgePdu/responseFlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcknowledgePdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ActionRequestPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestPdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestPdu/actionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestPdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestPdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ActionRequestPdu/fixedDatums"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ActionRequestPdu/variableDatums"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ActionResponsePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionResponsePdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionResponsePdu/requestStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionResponsePdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionResponsePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ActionResponsePdu/fixedDatums"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ActionResponsePdu/variableDatums"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//DataQueryPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryPdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryPdu/timeInterval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryPdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryPdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DataQueryPdu/fixedDatums"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DataQueryPdu/variableDatums"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SetDataPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataPdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataPdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataPdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataPdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SetDataPdu/fixedDatums"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SetDataPdu/variableDatums"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//DataPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataPdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataPdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataPdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataPdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DataPdu/fixedDatums"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DataPdu/variableDatums"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EventReportPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventReportPdu/eventType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventReportPdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventReportPdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventReportPdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EventReportPdu/fixedDatums"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EventReportPdu/variableDatums"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//CommentPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CommentPdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CommentPdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CommentPdu/fixedDatums"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CommentPdu/variableDatums"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//DistributedEmissionsFamilyPdu"/>
+    <genClasses ecoreClass="DIS1998.ecore#//ElectronicEmissionsPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ElectronicEmissionsPdu/emittingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ElectronicEmissionsPdu/eventID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionsPdu/stateUpdateIndicator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionsPdu/numberOfSystems"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ElectronicEmissionsPdu/paddingForEmissionsPdu"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ElectronicEmissionsPdu/systems"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//DesignatorPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DesignatorPdu/designatingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DesignatorPdu/codeName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DesignatorPdu/designatedEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DesignatorPdu/designatorCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DesignatorPdu/designatorPower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DesignatorPdu/designatorWavelength"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DesignatorPdu/designatorSpotWrtDesignated"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DesignatorPdu/designatorSpotLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DesignatorPdu/deadReckoningAlgorithm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DesignatorPdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DesignatorPdu/padding2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DesignatorPdu/entityLinearAcceleration"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//UaPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//UaPdu/emittingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//UaPdu/eventID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//UaPdu/stateChangeIndicator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//UaPdu/pad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//UaPdu/passiveParameterIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//UaPdu/propulsionPlantConfiguration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//UaPdu/numberOfShafts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//UaPdu/numberOfAPAs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//UaPdu/numberOfUAEmitterSystems"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//UaPdu/shaftRPMs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//UaPdu/apaData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//UaPdu/emitterSystems"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//IffAtcNavAidsLayer1Pdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer1Pdu/emittingEntityId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer1Pdu/eventID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer1Pdu/location"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer1Pdu/systemID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IffAtcNavAidsLayer1Pdu/pad2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer1Pdu/fundamentalParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//IffAtcNavAidsLayer2Pdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer2Pdu/layerHeader"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer2Pdu/beamData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer2Pdu/secondaryOperationalData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IffAtcNavAidsLayer2Pdu/fundamentalIffParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SeesPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SeesPdu/orginatingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SeesPdu/infraredSignatureRepresentationIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SeesPdu/acousticSignatureRepresentationIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SeesPdu/radarCrossSectionSignatureRepresentationIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SeesPdu/numberOfPropulsionSystems"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SeesPdu/numberOfVectoringNozzleSystems"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SeesPdu/propulsionSystemData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SeesPdu/vectoringSystemData"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//RadioCommunicationsFamilyPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//RadioCommunicationsFamilyPdu/entityId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RadioCommunicationsFamilyPdu/radioId"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//IntercomSignalPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IntercomSignalPdu/entityID_1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomSignalPdu/communicationsDeviceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomSignalPdu/encodingScheme"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomSignalPdu/tdlType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomSignalPdu/sampleRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomSignalPdu/dataLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomSignalPdu/samples"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IntercomSignalPdu/data"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//TransmitterPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransmitterPdu/radioEntityType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/transmitState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/inputSource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/padding1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransmitterPdu/antennaLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransmitterPdu/relativeAntennaLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/antennaPatternType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/antennaPatternCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/frequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/transmitFrequencyBandwidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/power"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransmitterPdu/modulationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/cryptoSystem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/cryptoKeyId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/modulationParameterCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/padding2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransmitterPdu/padding3"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransmitterPdu/modulationParametersList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransmitterPdu/antennaPatternList"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SignalPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SignalPdu/encodingScheme"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SignalPdu/tdlType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SignalPdu/sampleRate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SignalPdu/dataLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SignalPdu/samples"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SignalPdu/data"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ReceiverPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ReceiverPdu/receiverState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ReceiverPdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ReceiverPdu/receivedPoser"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ReceiverPdu/transmitterEntityId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ReceiverPdu/transmitterRadioId"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//IntercomControlPdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/controlType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/communicationsChannelType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IntercomControlPdu/sourceEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/sourceCommunicationsDeviceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/sourceLineID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/transmitPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/transmitLineState"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/command"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IntercomControlPdu/masterEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/masterCommunicationsDeviceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IntercomControlPdu/intercomParametersLength"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IntercomControlPdu/intercomParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EntityManagementFamilyPdu"/>
+    <genClasses ecoreClass="DIS1998.ecore#//AggregateStatePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/aggregateID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/forceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/aggregateState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/aggregateType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/formation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/aggregateMarking"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/dimensions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/orientation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/centerOfMass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/velocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/numberOfDisAggregates"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/numberOfDisEntities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/numberOfSilentAggregateTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/numberOfSilentEntityTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/aggregateIDList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/entityIDList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/pad2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/silentAggregateSystemList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/silentEntitySystemList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AggregateStatePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//AggregateStatePdu/variableDatumList"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//IsGroupOfPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IsGroupOfPdu/groupEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IsGroupOfPdu/groupedEntityCategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IsGroupOfPdu/numberOfGroupedEntities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IsGroupOfPdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IsGroupOfPdu/latitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//IsGroupOfPdu/longitude"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IsGroupOfPdu/groupedEntityDescriptions"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//TransferControlRequestPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransferControlRequestPdu/orginatingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransferControlRequestPdu/recevingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransferControlRequestPdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransferControlRequestPdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransferControlRequestPdu/tranferType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransferControlRequestPdu/transferEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//TransferControlRequestPdu/numberOfRecordSets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//TransferControlRequestPdu/recordSets"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//IsPartOfPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IsPartOfPdu/orginatingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IsPartOfPdu/receivingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IsPartOfPdu/relationship"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IsPartOfPdu/partLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IsPartOfPdu/namedLocationID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//IsPartOfPdu/partEntityType"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//MinefieldFamilyPdu"/>
+    <genClasses ecoreClass="DIS1998.ecore#//MinefieldStatePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldStatePdu/minefieldID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldStatePdu/minefieldSequence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldStatePdu/forceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldStatePdu/numberOfPerimeterPoints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldStatePdu/minefieldType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldStatePdu/numberOfMineTypes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldStatePdu/minefieldLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldStatePdu/minefieldOrientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldStatePdu/appearance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldStatePdu/protocolMode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldStatePdu/perimeterPoints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldStatePdu/mineType"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//MinefieldQueryPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldQueryPdu/minefieldID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldQueryPdu/requestingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldQueryPdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldQueryPdu/numberOfPerimeterPoints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldQueryPdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldQueryPdu/numberOfSensorTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldQueryPdu/dataFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldQueryPdu/requestedMineType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldQueryPdu/requestedPerimeterPoints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldQueryPdu/sensorTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//MinefieldDataPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldDataPdu/minefieldID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldDataPdu/requestingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/minefieldSequenceNumbeer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/pduSequenceNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/numberOfPdus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/numberOfMinesInThisPdu"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/numberOfSensorTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/dataFilter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldDataPdu/mineType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldDataPdu/sensorTypes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldDataPdu/pad3"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldDataPdu/mineLocation"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//MinefieldResponseNackPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldResponseNackPdu/minefieldID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldResponseNackPdu/requestingEntityID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldResponseNackPdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//MinefieldResponseNackPdu/numberOfMissingPdus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//MinefieldResponseNackPdu/missingPduSequenceNumbers"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SyntheticEnvironmentFamilyPdu"/>
+    <genClasses ecoreClass="DIS1998.ecore#//EnvironmentalProcessPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EnvironmentalProcessPdu/environementalProcessID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EnvironmentalProcessPdu/environmentType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EnvironmentalProcessPdu/modelType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EnvironmentalProcessPdu/environmentStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EnvironmentalProcessPdu/numberOfEnvironmentRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EnvironmentalProcessPdu/sequenceNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EnvironmentalProcessPdu/environmentRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//GriddedDataPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//GriddedDataPdu/environmentalSimulationApplicationID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/fieldNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/pduNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/pduTotal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/coordinateSystem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/numberOfGridAxes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/constantGrid"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//GriddedDataPdu/environmentType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//GriddedDataPdu/orientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/sampleTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/totalValues"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/vectorDimension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/padding1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//GriddedDataPdu/padding2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//GriddedDataPdu/gridDataList"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//PointObjectStatePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//PointObjectStatePdu/objectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//PointObjectStatePdu/referencedObjectID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PointObjectStatePdu/updateNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PointObjectStatePdu/forceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PointObjectStatePdu/modifications"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//PointObjectStatePdu/objectType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//PointObjectStatePdu/objectLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//PointObjectStatePdu/objectOrientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PointObjectStatePdu/objectAppearance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//PointObjectStatePdu/requesterID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//PointObjectStatePdu/receivingID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PointObjectStatePdu/pad2"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//LinearObjectStatePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearObjectStatePdu/objectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearObjectStatePdu/referencedObjectID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearObjectStatePdu/updateNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearObjectStatePdu/forceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//LinearObjectStatePdu/numberOfSegments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearObjectStatePdu/requesterID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearObjectStatePdu/receivingID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearObjectStatePdu/objectType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//LinearObjectStatePdu/linearSegmentParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ArealObjectStatePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ArealObjectStatePdu/objectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ArealObjectStatePdu/referencedObjectID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArealObjectStatePdu/updateNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArealObjectStatePdu/forceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArealObjectStatePdu/modifications"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ArealObjectStatePdu/objectType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ArealObjectStatePdu/objectAppearance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ArealObjectStatePdu/numberOfPoints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ArealObjectStatePdu/requesterID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ArealObjectStatePdu/receivingID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ArealObjectStatePdu/objectLocation"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SimulationManagementWithReliabilityFamilyPdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SimulationManagementWithReliabilityFamilyPdu/originatingEntityID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SimulationManagementWithReliabilityFamilyPdu/receivingEntityID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//CreateEntityReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CreateEntityReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CreateEntityReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CreateEntityReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CreateEntityReliablePdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//RemoveEntityReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RemoveEntityReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RemoveEntityReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RemoveEntityReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RemoveEntityReliablePdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//StartResumeReliablePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//StartResumeReliablePdu/realWorldTime"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//StartResumeReliablePdu/simulationTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StartResumeReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StartResumeReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StartResumeReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StartResumeReliablePdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//StopFreezeReliablePdu">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//StopFreezeReliablePdu/realWorldTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezeReliablePdu/reason"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezeReliablePdu/frozenBehavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezeReliablePdu/requiredReliablityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezeReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//StopFreezeReliablePdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//AcknowledgeReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcknowledgeReliablePdu/acknowledgeFlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcknowledgeReliablePdu/responseFlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//AcknowledgeReliablePdu/requestID"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ActionRequestReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestReliablePdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestReliablePdu/actionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestReliablePdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionRequestReliablePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ActionRequestReliablePdu/fixedDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ActionRequestReliablePdu/variableDatumRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//ActionResponseReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionResponseReliablePdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionResponseReliablePdu/responseStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionResponseReliablePdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//ActionResponseReliablePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ActionResponseReliablePdu/fixedDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//ActionResponseReliablePdu/variableDatumRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//DataQueryReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryReliablePdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryReliablePdu/timeInterval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryReliablePdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataQueryReliablePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DataQueryReliablePdu/fixedDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DataQueryReliablePdu/variableDatumRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SetDataReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataReliablePdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataReliablePdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetDataReliablePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SetDataReliablePdu/fixedDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SetDataReliablePdu/variableDatumRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//DataReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataReliablePdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataReliablePdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//DataReliablePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DataReliablePdu/fixedDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//DataReliablePdu/variableDatumRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//EventReportReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventReportReliablePdu/eventType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventReportReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventReportReliablePdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//EventReportReliablePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EventReportReliablePdu/fixedDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//EventReportReliablePdu/variableDatumRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//CommentReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CommentReliablePdu/numberOfFixedDatumRecords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//CommentReliablePdu/numberOfVariableDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CommentReliablePdu/fixedDatumRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//CommentReliablePdu/variableDatumRecords"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//RecordQueryReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordQueryReliablePdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordQueryReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordQueryReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordQueryReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordQueryReliablePdu/eventType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordQueryReliablePdu/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//RecordQueryReliablePdu/numberOfRecords"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//RecordQueryReliablePdu/recordIDs"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//SetRecordReliablePdu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetRecordReliablePdu/requestID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetRecordReliablePdu/requiredReliabilityService"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetRecordReliablePdu/pad1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetRecordReliablePdu/pad2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//SetRecordReliablePdu/numberOfRecordSets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//SetRecordReliablePdu/recordSets"/>
+    </genClasses>
+    <genClasses ecoreClass="DIS1998.ecore#//PduContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DIS1998.ecore#//PduContainer/numberOfPdus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DIS1998.ecore#//PduContainer/pdus"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

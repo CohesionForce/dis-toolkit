@@ -1,0 +1,42 @@
+
+{"type":"record","name":"ServiceRequestPdu","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"reception_timestamp","type":["null",
+		{"type":"record","name":"Time_t","fields":[
+			{"name":"sec","type":"int"},
+			{"name":"nanosec","type":"int"}
+		]}]},
+	{"name":"source_timestamp","type":["null","Time_t"]},
+	{"name":"protocolVersion","type":"int"},
+	{"name":"exerciseID","type":"int"},
+	{"name":"pduType","type":"int"},
+	{"name":"protocolFamily","type":"int"},
+	{"name":"timestamp","type":"long"},
+	{"name":"pduLength","type":"int"},
+	{"name":"padding","type":"int"},
+	{"name":"requestingEntityID","type":["null",{"type":"record","name":"EntityID","fields":[
+	{"name":"site","type":"int"},
+			{"name":"application","type":"int"},
+			{"name":"entity","type":"int"}
+			]}
+	]},
+	{"name":"servicingEntityID","type":["null","EntityID"]},
+	{"name":"serviceTypeRequested","type":"int"},
+	{"name":"numberOfSupplies","type":"int"},
+	{"name":"serviceRequestPadding","type":"int"},
+	{"name":"supplies","type":["null",{"type":"array","items":
+	{"type":"record","name":"SupplyQuantity","fields":[
+	{"name":"supplyType","type":["null",{"type":"record","name":"EntityType","fields":[
+	{"name":"entityKind","type":"int"},
+			{"name":"domain","type":"int"},
+			{"name":"country","type":"int"},
+			{"name":"category","type":"int"},
+			{"name":"subcategory","type":"int"},
+			{"name":"spec","type":"int"},
+			{"name":"extra","type":"int"}
+			]}
+	]},
+			{"name":"quantity","type":"int"}
+			]}
+	}
+	]}
+]}

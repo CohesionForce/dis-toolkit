@@ -1,0 +1,6 @@
+
+{"type":"record","name":"IntercomCommunicationsParameters","namespace":"com.cohesionforce.dis.avro","fields":[
+	{"name":"recordType","type":"int"},
+	{"name":"recordLength","type":"int"},
+	{"name":"recordSpecificField","type":"long"}
+]}
