@@ -32,8 +32,13 @@ class EcoreGenerator implements IGenerator {
 	 * Code generation entry method
 	 */
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+		// The Plugin generator only needs to run once for the entire resource
 		pluginGen.generatePlugin(fsa)
+		
+		// The Logwriter generator only needs to run once for the entire resource
 		logWriter.generateLogWriter(fsa)
+		
+		// The rest of the generators need to run against each package in the resource
 		for (EPackage epackage : resource.contents.filter(typeof(EPackage))) {
 			converter.generateConverter(epackage, fsa)
 			avroGen.generateAvroSchema(epackage, fsa)
