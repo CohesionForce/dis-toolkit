@@ -20,6 +20,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Random;
 import java.util.TreeMap;
@@ -42,8 +43,8 @@ import com.cohesionforce.dis.avro.Vector3Float;
 
 /**
  * The ConvertCSV class is a custom class that is not currently generated. The
- * purpose of the class is to convert NYC taxi data from CSV and transform it
- * to some type of DIS structure.
+ * purpose of the class is to convert NYC taxi data from CSV and transform it to
+ * some type of DIS structure.
  * 
  * http://www.andresmh.com/nyctaxitrips/
  * 
@@ -72,6 +73,8 @@ public class ConvertCSV implements Runnable {
 	private int nextInt = 1;
 	private Marking marking = new Marking();
 	private Vector3Float zeroVector = new Vector3Float();
+	private Hashtable<String, Double> altitudeMap = new Hashtable<String, Double>();
+	private String outputFile = "output.parquet";
 
 	DeadReckoningParameter dr = new DeadReckoningParameter();
 
@@ -89,10 +92,14 @@ public class ConvertCSV implements Runnable {
 
 	public void setInputFile(String inFile) {
 		this.inputFile = inFile;
+		File file = new File(inputFile);
+		if(file.exists()) {
+			this.outputFile = file.getName() + "."+this.extension;
+		}
 	}
 
 	public void run() {
-		
+
 		int count = 0;
 
 		System.out.println("Opening file to convert: " + inputFile);
@@ -127,21 +134,40 @@ public class ConvertCSV implements Runnable {
 
 					String medallion = pieces[0];
 
-					LocalDateTime localTime = LocalDateTime.from(formatter.parse(pieces[5]));
-					ZonedDateTime zoneTime = localTime.atZone(ZoneId.of("America/New_York"));
-					long ts = zoneTime.toInstant().toEpochMilli();
 
-					EntityStatePdu output = getNewEntityState(medallion);
-					output.setTimestamp(ts);
+					{
+						LocalDateTime localTime = LocalDateTime.from(formatter.parse(pieces[5]));
+						ZonedDateTime zoneTime = localTime.atZone(ZoneId.of("America/New_York"));
+						long ts = zoneTime.toInstant().toEpochMilli();
+						EntityStatePdu output = getNewEntityState(medallion);
+						output.setTimestamp(ts);
+						double altitude = 0.0;
+						// Create EntityLocation from string
+						double plon = Double.parseDouble(pieces[10]);
+						double plat = Double.parseDouble(pieces[11]);
+						Vector3Double loc = getLocation(plon, plat, altitude);
+						output.setEntityLocation(loc);
 
-					// Create EntityLocation from string
-					double plon = Double.parseDouble(pieces[10]);
-					double plat = Double.parseDouble(pieces[11]);
-					Vector3Double loc = getLocation(plon, plat);
-					output.setEntityLocation(loc);
+						logPdu(output, 1);
+					}
+					
+					if(pieces.length >= 13) 
+					{
+						LocalDateTime localTime = LocalDateTime.from(formatter.parse(pieces[6]));
+						ZonedDateTime zoneTime = localTime.atZone(ZoneId.of("America/New_York"));
+						long ts = zoneTime.toInstant().toEpochMilli();
+						EntityStatePdu output = getNewEntityState(medallion);
+						output.setTimestamp(ts);
+						double altitude = 0.0;
+						// Create EntityLocation from string
+						double plon = Double.parseDouble(pieces[12]);
+						double plat = Double.parseDouble(pieces[13]);
+						Vector3Double loc = getLocation(plon, plat, altitude);
+						output.setEntityLocation(loc);
 
-					logPdu(output, 1);
-
+						logPdu(output, 1);
+					}
+					
 					if (++count % 100000 == 0) {
 						System.out.println("Converted " + count + " PDUs");
 					}
@@ -211,7 +237,7 @@ public class ConvertCSV implements Runnable {
 	private void startWriters() {
 
 		entityStatePduWriter = new LogWriter<EntityStatePdu>(threadGroup,
-				outputDirectory + File.separator + "EntityStatePdu." + extension, EntityStatePdu.getClassSchema());
+				outputDirectory + File.separator + this.outputFile, EntityStatePdu.getClassSchema());
 		writers.add(entityStatePduWriter);
 		entityStatePduWriter.start();
 	}
@@ -265,7 +291,7 @@ public class ConvertCSV implements Runnable {
 		return output;
 
 	}
-	
+
 	private Vector3Float getRandomFloatV() {
 		Vector3Float vector = new Vector3Float();
 		vector.setX((float) (1.0 - (rand.nextFloat() * 2.0) * Float.MAX_VALUE));
@@ -274,11 +300,11 @@ public class ConvertCSV implements Runnable {
 		return vector;
 	}
 
-	private Vector3Double getLocation(double lat, double lon) {
+	private Vector3Double getLocation(double lat, double lon, double altitude) {
 		Vector3Double output = new Vector3Double();
 		double phi = PI_OVER_2 - lat;
 		double theta = lon;
-		double rho = EARTH_RADIUS;
+		double rho = EARTH_RADIUS + altitude;
 		/* Subvalue for optimization */
 		double rho_sin_phi = rho * Math.sin(phi);
 
@@ -296,14 +322,6 @@ public class ConvertCSV implements Runnable {
 		orientation.setTheta((float) (1.0 - (rand.nextFloat() * 2.0) * Math.PI));
 		orientation.setPhi((float) (1.0 - (rand.nextFloat() * 2.0) * Math.PI));
 		return orientation;
-	}
-
-	private EntityID getRandomEntityId() {
-		EntityID output = new EntityID();
-		output.setSite(rand.nextInt(1000) + 1);
-		output.setApplication(rand.nextInt(1000) + 1);
-		output.setEntity(rand.nextInt(1000) + 1);
-		return output;
 	}
 
 	private EntityType getRandomEntityType() {

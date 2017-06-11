@@ -27,6 +27,7 @@ class EcoreGenerator implements IGenerator {
 	GenerateConverter converter = new GenerateConverter
 	GeneratePlugin pluginGen = new GeneratePlugin
 	GenerateMarshaller marshallerGen = new GenerateMarshaller
+	GenerateCaseClasses caseGen = new GenerateCaseClasses
 	
 	/**
 	 * Code generation entry method
@@ -44,6 +45,7 @@ class EcoreGenerator implements IGenerator {
 			avroGen.generateAvroSchema(epackage, fsa)
 			unmarshallGen.generateUnmarshaller(epackage, fsa)
 			marshallerGen.generateMarshaller(epackage, fsa)
+			caseGen.generateMarshaller(epackage, fsa)
 		}
 	}
 }
